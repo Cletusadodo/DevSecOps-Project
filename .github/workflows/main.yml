@@ -47,7 +47,7 @@ jobs:
         with:
          args:
            -Dsonar.projectKey=Cletusadodo_DevSecOps-Project
-           -Dsonar.organization=Cletusadodo
+           -Dsonar.organization=cletusadodo
            -Dsonar.sources=.
 
 
