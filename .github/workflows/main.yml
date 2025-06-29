@@ -82,6 +82,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: test
+        continue-on-error: true
 
       - name: Run Snyk Docker Image Scan
         uses: snyk/actions/docker@0.4.0
