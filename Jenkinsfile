@@ -92,6 +92,16 @@ pipeline {
             }
         }
 
+    stage('Upload Reports to DefectDojo') {
+      steps {
+          withCredentials([string(credentialsId: 'defectdojo-api-token', variable: 'DEFECTDOJO_API_KEY')]) {
+            sh '''
+                pip install requests --quiet
+                python3 upload_all_to_defectdojo.py
+            '''
+        }
+    }
+}
         stage('Deploy to Container') {
             steps {
                 sh 'docker run -d --name netflix -p 8081:80 cletusadodo/netflix:latest'
