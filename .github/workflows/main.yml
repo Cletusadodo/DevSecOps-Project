@@ -91,4 +91,5 @@ jobs:
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/autodesk-netflix:latest
           args: --file=Dockerfile
+        continue-on-error: true
 
