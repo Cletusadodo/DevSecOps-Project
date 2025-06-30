@@ -1,4 +1,4 @@
-#! bin/bash
+#!/bin/bash
 
 
 curl -s https://api.github.com/repos/gitleaks/gitleaks/releases/latest \

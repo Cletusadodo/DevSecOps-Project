@@ -1,4 +1,4 @@
-#! bin/bash
+#!/bin/bash
 
 
 sudo apt-get install wget apt-transport-https gnupg lsb-release
